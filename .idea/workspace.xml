@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08d86ee8-c770-4642-b5ac-ab0d71bd6860" name="Changes" comment="Creating app">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/lorem.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/maapis.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/rails.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/ridocker.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/ruby.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/tailwind.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+    <list default="true" id="08d86ee8-c770-4642-b5ac-ab0d71bd6860" name="Changes" comment="Seeds added">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +42,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -56,8 +51,18 @@
     "nodejs_package_manager_path": "npm",
     "ruby.structure.view.model.defaults.configured": "true",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="RackRunConfigurationType" factoryName="Rack">
       <RACK_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
@@ -96,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742753409015</updated>
-      <workItem from="1742753410700" duration="1821000" />
+      <workItem from="1742753410700" duration="5141000" />
     </task>
     <task id="LOCAL-00001" summary="Creating app">
       <option name="closed" value="true" />
@@ -106,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742753666354</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Seeds added">
+      <option name="closed" value="true" />
+      <created>1742757190033</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742757190033</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +127,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creating app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating app" />
+    <MESSAGE value="Seeds added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seeds added" />
   </component>
 </project>
