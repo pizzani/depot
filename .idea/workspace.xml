@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08d86ee8-c770-4642-b5ac-ab0d71bd6860" name="Changes" comment="Catalog visits counter">
+    <list default="true" id="08d86ee8-c770-4642-b5ac-ab0d71bd6860" name="Changes" comment="Catalog visits counter new features">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ce8759b1-7fd2-4245-a3d1-13bc161dcf3b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ce8759b1-7fd2-4245-a3d1-13bc161dcf3b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/concerns/store_visits.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/concerns/store_visits.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/line_items_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/line_items_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/store/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/store/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/cart.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cart.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/carts/_cart.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/_cart.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/line_items_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/line_items_controller_test.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +73,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db/migrate" />
+      <recent name="$PROJECT_DIR$/db" />
       <recent name="$PROJECT_DIR$/app/assets/images" />
     </key>
   </component>
@@ -146,7 +151,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742753409015</updated>
-      <workItem from="1742753410700" duration="34920000" />
+      <workItem from="1742753410700" duration="37135000" />
     </task>
     <task id="LOCAL-00001" summary="Creating app">
       <option name="closed" value="true" />
@@ -204,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743362289608</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Catalog visits counter new features">
+      <option name="closed" value="true" />
+      <created>1743364110845</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743364110845</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +231,8 @@
     <MESSAGE value="Store page creation" />
     <MESSAGE value="Cart creation" />
     <MESSAGE value="Catalog visits counter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Catalog visits counter" />
+    <MESSAGE value="Catalog visits counter new features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Catalog visits counter new features" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/depot@test_product_price_must_be_positive.rcov" NAME="test_product_price_must_be_positive Coverage Results" MODIFIED="1742780979255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="depot" />
