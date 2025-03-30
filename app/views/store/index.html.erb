@@ -7,7 +7,12 @@
 
 
   <h1 class="font-bold text-xl mb-6 pb-2 border-b-2">
-    Your Pragmatic Catalog - <%= pluralize(@session_visits,"visit") %>
+    Your Pragmatic Catalog
+    <%= if @session_visits >= 5
+          " - " + pluralize(@session_visits, "visit")
+        else
+          ""
+        end %>
   </h1>
 
   <ul>

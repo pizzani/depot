@@ -1,5 +1,6 @@
 class LineItemsController < ApplicationController
   include CurrentCart
+  include StoreVisits
   before_action :set_cart, only: %i[ create ]
   before_action :set_line_item, only: %i[ show edit update destroy ]
 
@@ -28,6 +29,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
+        reset_visits
         format.html { redirect_to cart_url(@line_item.cart), notice: "Line item was successfully created." }
         format.json { render :show, status: :created, location: @line_item }
       else
@@ -41,6 +43,7 @@ class LineItemsController < ApplicationController
   def update
     respond_to do |format|
       if @line_item.update(line_item_params)
+        reset_visits
         format.html { redirect_to @line_item, notice: "Line item was successfully updated." }
         format.json { render :show, status: :ok, location: @line_item }
       else

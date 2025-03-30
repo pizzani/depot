@@ -2,8 +2,24 @@
 
 module StoreVisits
   def set_visits
-    @session_visits = session[:counter] || 0
-    session[:counter] = @session_visits
-    session[:counter] += 1
+    if session[:counter].nil?
+      session[:counter] = 0
+      session[:counter] += 1
+      @session_visits = session[:counter]
+    else
+      session[:counter] += 1
+      @session_visits = session[:counter]
+    end
+  end
+
+  def reset_visits
+    if session[:counter].nil?
+      session[:counter] = 0
+      session[:counter] += 1
+      @session_visits = session[:counter]
+    else
+      session[:counter] = 0
+      @session_visits = session[:counter]
+    end
   end
 end
