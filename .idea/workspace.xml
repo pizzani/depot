@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08d86ee8-c770-4642-b5ac-ab0d71bd6860" name="Changes" comment="Catalog visits counter new features">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ce8759b1-7fd2-4245-a3d1-13bc161dcf3b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ce8759b1-7fd2-4245-a3d1-13bc161dcf3b.xml" afterDir="false" />
+    <list default="true" id="08d86ee8-c770-4642-b5ac-ab0d71bd6860" name="Changes" comment="Add quantity to line items and optimize cart behavior&#10;&#10;Introduced a `quantity` column to `line_items` with a default value of 1. Updated cart functionality to combine line items with the same product into one, improving efficiency and simplifying cart representation. Adjusted views and tests to reflect these changes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/line_items_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/line_items_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/cart.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cart.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/carts/_cart.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/_cart.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/line_items_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/line_items_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/carts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/carts_controller.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,49 +23,49 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "pizzani"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pizzani&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:pizzani/depot.git",
-    "accountId": "52700721-f023-43e0-a490-10c72b7e10e8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:pizzani/depot.git&quot;,
+    &quot;accountId&quot;: &quot;52700721-f023-43e0-a490-10c72b7e10e8&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2ujE6ZcrjiWAOSUOdAqSqnGqTt5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Test::Unit/Shoulda/Minitest.test_product_price_must_be_positive.executor": "Run",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_product_price_must_be_positive.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ssh.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/db/migrate" />
@@ -151,7 +146,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742753409015</updated>
-      <workItem from="1742753410700" duration="37135000" />
+      <workItem from="1742753410700" duration="46879000" />
+      <workItem from="1743948009606" duration="2053000" />
+      <workItem from="1743950583281" duration="2219000" />
     </task>
     <task id="LOCAL-00001" summary="Creating app">
       <option name="closed" value="true" />
@@ -217,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743364110845</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add quantity to line items and optimize cart behavior&#10;&#10;Introduced a `quantity` column to `line_items` with a default value of 1. Updated cart functionality to combine line items with the same product into one, improving efficiency and simplifying cart representation. Adjusted views and tests to reflect these changes.">
+      <option name="closed" value="true" />
+      <created>1743368185649</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743368185649</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +237,8 @@
     <MESSAGE value="Cart creation" />
     <MESSAGE value="Catalog visits counter" />
     <MESSAGE value="Catalog visits counter new features" />
-    <option name="LAST_COMMIT_MESSAGE" value="Catalog visits counter new features" />
+    <MESSAGE value="Add quantity to line items and optimize cart behavior&#10;&#10;Introduced a `quantity` column to `line_items` with a default value of 1. Updated cart functionality to combine line items with the same product into one, improving efficiency and simplifying cart representation. Adjusted views and tests to reflect these changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add quantity to line items and optimize cart behavior&#10;&#10;Introduced a `quantity` column to `line_items` with a default value of 1. Updated cart functionality to combine line items with the same product into one, improving efficiency and simplifying cart representation. Adjusted views and tests to reflect these changes." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/depot@test_product_price_must_be_positive.rcov" NAME="test_product_price_must_be_positive Coverage Results" MODIFIED="1742780979255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="depot" />
