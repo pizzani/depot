@@ -48,4 +48,12 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to line_items_url
   end
+
+  test "should stack line_item for unique and duplicate products" do
+    assert_difference("LineItem.count", 2) do
+      post line_items_url, params: { product_id: products(:ruby).id }
+      post line_items_url, params: { product_id: products(:ruby).id }
+      post line_items_url, params: { product_id: products(:one).id }
+    end
+  end
 end
