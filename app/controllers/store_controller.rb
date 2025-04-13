@@ -1,7 +1,9 @@
 class StoreController < ApplicationController
   include StoreVisits
-  def index
+  include CurrentCart
+  before_action :set_cart
 
+  def index
     set_visits
 
     @products = Product.order(:title)
