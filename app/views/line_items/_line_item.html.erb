@@ -1,7 +1,11 @@
-    <tr>
-      <td class="text-right"><%= line_item.quantity %></td>
-      <td>&times;</td>
-      <td class="pr-2"><%= line_item.product.title %></td>
-      <td class="text-right font-bold"><%= number_to_currency(line_item.total_price) %></td>
-      <td class="p-1"><%= button_to 'Remove product',line_item,method: :delete, class: 'text-sm ml-4 rounded-lg py-1 px-2 text-white bg-red-600' %></td>
-    </tr>
+<% if line_item == @current_item %>
+  <tr class="line-item-highlight">
+<% else %>
+  <tr>
+<% end %>
+    <td class="text-right"><%= line_item.quantity %></td>
+    <td>&times;</td>
+    <td class="pr-2"><%= line_item.product.title %></td>
+    <td class="text-right font-bold"><%= number_to_currency(line_item.total_price) %></td>
+    <td class="p-1"><%= button_to 'Remove product',line_item,method: :delete, class: 'text-sm ml-4 rounded-lg py-1 px-2 text-white bg-red-600' %></td>
+  </tr>
