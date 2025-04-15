@@ -2,7 +2,7 @@ class LineItemsController < ApplicationController
   include CurrentCart
   include StoreVisits
   before_action :set_cart, only: %i[ create ]
-  before_action :set_line_item, only: %i[ show edit update destroy ]
+  before_action :set_line_item, only: %i[ show edit update destroy reduce_product_quantity_by_unit ]
 
   # GET /line_items or /line_items.json
   def index
@@ -63,6 +63,19 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to store_index_url, status: :see_other, notice: "#{product.title} removed from cart." }
       format.json { head :no_content }
+    end
+  end
+
+  def reduce_product_quantity_by_unit
+    # This method have the responsability to reduce the quantity of product until 0
+    # when 0 is reached it should call the destroy method to end it and remove from cart.
+    # Of course a product can only have its quantity reduced if its above 0 so thats the first check
+    if @line_item.quantity == 0
+      destroy()
+    else
+      quantity = @line_item.quantity
+      quantity -=
+      @line_item.quantity = quantity
     end
   end
 

@@ -66,4 +66,23 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_match /<tr class="line-item-highlight">/, @response.body
   end
+
+  test "should reduce line_item product by 1 on click" do
+    assert_difference("LineItem.sum(:quantity)", 2) do
+      2.times do
+        post line_items_url, params: { product_id: products(:ruby).id },
+        as: :turbo_stream
+      end
+    end
+
+    line_item = LineItem.find_by(product: products(:ruby))
+
+    assert_difference("LineItem.count", -1) do
+      # Use the new reduce_product_quantity_by_unit method of line_item to
+      # reduce by 2 the same line_item.
+      2.times do
+        patch reduce_product_quantity_by_unit_line_item_url(line_item)
+      end
+    end
+  end
 end

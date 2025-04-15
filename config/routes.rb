@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :line_items
+  resources :line_items do
+    member do
+      patch :reduce_product_quantity_by_unit
+    end
+  end
+
   resources :carts
   # get "store/index"
   resources :products
