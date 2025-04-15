@@ -67,7 +67,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     assert_match /<tr class="line-item-highlight">/, @response.body
   end
 
-  test "should reduce line_item product by 1 on click" do
+  test "should decrease line_item product quantity by 1 on click" do
     assert_difference("LineItem.sum(:quantity)", 2) do
       2.times do
         post line_items_url, params: { product_id: products(:ruby).id },
@@ -77,12 +77,12 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
 
     line_item = LineItem.find_by(product: products(:ruby))
 
-    assert_difference("LineItem.count", -1) do
-      # Use the new reduce_product_quantity_by_unit method of line_item to
-      # reduce by 2 the same line_item.
-      2.times do
+    assert_difference("LineItem.sum(:quantity)", -1) do
         patch reduce_product_quantity_by_unit_line_item_url(line_item)
-      end
     end
+
+    follow_redirect!
+
+    assert_select "td", "1"
   end
 end

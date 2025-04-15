@@ -70,12 +70,18 @@ class LineItemsController < ApplicationController
     # This method have the responsability to reduce the quantity of product until 0
     # when 0 is reached it should call the destroy method to end it and remove from cart.
     # Of course a product can only have its quantity reduced if its above 0 so thats the first check
-    if @line_item.quantity == 0
-      destroy()
+    if @line_item.quantity == 1
+      destroy
     else
-      quantity = @line_item.quantity
-      quantity -=
-      @line_item.quantity = quantity
+      @line_item.quantity -= 1
+      respond_to do |format|
+        if @line_item.save
+          update
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @line_item.errors, status: :unprocessable_entity }
+        end
+    end
     end
   end
 
