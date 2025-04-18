@@ -82,7 +82,6 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     end
 
     follow_redirect!
-
     assert_select "td", "1"
   end
 end

@@ -46,7 +46,8 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.update(line_item_params)
         reset_visits
-        format.html { redirect_to @line_item, notice: "Line item was successfully updated." }
+
+        format.html { redirect_to store_index_url, notice: "Line item was successfully updated." }
         format.json { render :show, status: :ok, location: @line_item }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -70,18 +71,19 @@ class LineItemsController < ApplicationController
     # This method have the responsability to reduce the quantity of product until 0
     # when 0 is reached it should call the destroy method to end it and remove from cart.
     # Of course a product can only have its quantity reduced if its above 0 so thats the first check
-    if @line_item.quantity == 1
+    if @line_item.quantity <= 1
       destroy
     else
       @line_item.quantity -= 1
       respond_to do |format|
         if @line_item.save
-          update
+          format.html { redirect_to store_index_url }
+          format.json { render :show, status: :ok, location: @line_item }
         else
           format.html { render :new, status: :unprocessable_entity }
           format.json { render json: @line_item.errors, status: :unprocessable_entity }
         end
-    end
+      end
     end
   end
 
