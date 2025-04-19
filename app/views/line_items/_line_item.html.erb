@@ -7,5 +7,8 @@
     <td>&times;</td>
     <td class="pr-2"><%= line_item.product.title %></td>
     <td class="text-right font-bold"><%= number_to_currency(line_item.total_price) %></td>
-    <td class="p-1"><%= button_to 'Remove product', reduce_product_quantity_by_unit_line_item_path(line_item), method: :patch, class: 'text-sm ml-4 rounded-lg py-1 px-2 text-white bg-red-600' %></td>
+
+    <% unless defined?(mailer) && mailer %>
+      <td class="p-1"><%= button_to 'Remove product', reduce_product_quantity_by_unit_line_item_path(line_item), method: :patch, class: 'text-sm ml-4 rounded-lg py-1 px-2 text-white bg-red-600' %></td>
+    <% end %>
   </tr>
